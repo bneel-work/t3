@@ -6,3 +6,4 @@ logzero
 websocket
 pyotp
 pandas
+django-admin-interface
