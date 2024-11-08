@@ -1,0 +1,7 @@
+django
+djangorestframework-simplejwt
+smartapi-python
+logzero
+websocket
+pyotp
+pandas
