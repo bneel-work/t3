@@ -1,13 +1,14 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .broker import BrokerClient
+from .brokers import BrokerClient
 
-class BrokerOrderView(APIView):
-    def post(self, request, broker_name):
+
+class BrokerPlaceOrder(APIView):
+    def post(self, request, broker_code):
         try:
             broker_config = request.data.get('broker_config', {}) 
-            broker_client = BrokerClient(broker_name, broker_config)
+            broker_client = BrokerClient(broker_code, broker_config)
 
             symbol = request.data.get('symbol')
             strick_price = request.data.get('strick_price')
